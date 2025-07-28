@@ -1359,25 +1359,17 @@
                     // Prepare the message for Telegram
                     const telegramMessage = `New message from RuhMantra website!\n\n*Name:* ${name}\n*Email:* ${email}\n*Message:* ${message}`;
                     
-                    // Telegram API endpoint
-                    const apiUrl = 'https://api.telegram.org/bot8310717815:AAFDYEy0ymM1NduK1pSslUeOopdWGEp4cGw/sendMessage';
+                    // NoCodeAPI endpoint
+                    const apiUrl = 'https://v1.nocodeapi.com/ruhmantra/telegram/ZBXiBQkyxcUFqzmS/sendMessage?data=';
                     
-                    // Send message to Telegram
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            chat_id: '@ruhmantra_messages', // Replace with your chat ID or channel name
-                            text: telegramMessage,
-                            parse_mode: 'Markdown'
-                        })
+                    // Send message to Telegram via NoCodeAPI
+                    const response = await fetch(apiUrl + encodeURIComponent(telegramMessage), {
+                        method: 'GET'
                     });
                     
                     const result = await response.json();
                     
-                    if (result.ok) {
+                    if (result.success) {
                         showNotification('success', 'Message sent successfully! We\'ll get back to you soon.');
                         // Clear the form
                         document.getElementById('name').value = '';
