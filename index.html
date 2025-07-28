@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RuhMantra | Words That Touch the Soul</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
     <style>
         :root {
             --dark-bg: #0a0a14;
@@ -36,7 +35,6 @@
             color: var(--text-light);
             line-height: 1.7;
             overflow-x: hidden;
-            touch-action: pan-y;
             -webkit-tap-highlight-color: transparent;
             background-image: 
                 radial-gradient(circle at 10% 20%, rgba(138, 43, 226, 0.1) 0%, transparent 20%),
@@ -73,7 +71,7 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            padding: 25px 50px;
+            padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -84,13 +82,13 @@
         }
 
         .navbar.scrolled {
-            padding: 18px 50px;
+            padding: 15px 50px;
             background: rgba(10, 8, 24, 0.97);
             box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
         }
 
         .logo {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
             color: var(--text-lighter);
             text-decoration: none;
@@ -117,13 +115,13 @@
 
         .nav-links {
             display: flex;
-            gap: 45px;
+            gap: 40px;
         }
 
         .nav-links a {
             color: var(--text-light);
             text-decoration: none;
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 500;
             position: relative;
             padding: 8px 0;
@@ -159,7 +157,7 @@
         }
 
         .hamburger .line {
-            width: 32px;
+            width: 30px;
             height: 3px;
             background: var(--text-light);
             margin: 6px 0;
@@ -177,6 +175,7 @@
             text-align: center;
             justify-content: center;
             position: relative;
+            padding-top: 150px;
         }
 
         .hero-content {
@@ -187,9 +186,9 @@
         }
 
         .tagline {
-            font-size: 3.2rem;
+            font-size: 3rem;
             font-weight: 700;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             text-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
             animation: fadeInUp 1.5s ease-out;
             color: var(--text-lighter);
@@ -199,13 +198,63 @@
         .tagline span {
             color: var(--gold);
             display: block;
-            font-size: 4rem;
-            margin-top: 20px;
+            font-size: 3.5rem;
+            margin-top: 15px;
             text-shadow: var(--glow-gold);
             background: linear-gradient(to right, var(--gold), #ffcc00);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+
+        .hero-text {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .primary-btn {
+            background: linear-gradient(90deg, var(--purple), #6a0dad);
+            color: white;
+            box-shadow: var(--glow);
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(138, 43, 226, 0.5);
+        }
+
+        .secondary-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .secondary-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
         }
 
         .scroll-hint {
@@ -220,7 +269,7 @@
         }
 
         .scroll-hint i {
-            font-size: 28px;
+            font-size: 24px;
             color: var(--light-purple);
         }
 
@@ -228,7 +277,6 @@
         #about {
             background: linear-gradient(to bottom, var(--darker-bg), var(--dark-bg));
             position: relative;
-            min-height: 80vh;
         }
 
         .about-content {
@@ -258,7 +306,7 @@
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             margin-bottom: 30px;
             text-align: center;
             position: relative;
@@ -340,7 +388,7 @@
             margin: 0 auto;
             background: var(--card-bg);
             backdrop-filter: blur(15px);
-            padding: 60px 40px;
+            padding: 50px 40px;
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
             border: 1px solid rgba(138, 43, 226, 0.35);
@@ -360,9 +408,9 @@
         }
 
         .coming-soon {
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: var(--gold);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             text-shadow: var(--glow-gold);
             animation: pulse 2.5s infinite;
             position: relative;
@@ -378,8 +426,8 @@
 
         .countdown-item {
             background: rgba(30, 25, 50, 0.8);
-            width: 90px;
-            height: 90px;
+            width: 85px;
+            height: 85px;
             border-radius: 50%;
             display: flex;
             flex-direction: column;
@@ -390,83 +438,64 @@
         }
 
         .countdown-value {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             font-weight: 700;
             color: var(--gold);
         }
 
         .countdown-label {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--light-purple);
         }
 
-        .play-store {
-            font-size: 5rem;
-            color: rgba(255, 255, 255, 0.25);
-            margin-top: 30px;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .play-store::after {
-            content: 'Notify Me';
-            position: absolute;
-            bottom: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1rem;
-            color: var(--light-purple);
-            white-space: nowrap;
-        }
-
-        .notify-form {
-            margin-top: 50px;
+        .app-platforms {
             display: flex;
-            gap: 15px;
-            max-width: 500px;
-            margin: 40px auto 0;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
         }
 
-        .notify-input {
-            flex: 1;
-            padding: 16px 20px;
+        .platform-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(30, 25, 50, 0.5);
             border: 1px solid rgba(138, 43, 226, 0.3);
-            background: rgba(20, 15, 35, 0.6);
-            border-radius: 50px;
-            color: var(--text-light);
-            font-family: 'Montserrat', sans-serif;
+            border-radius: 16px;
+            padding: 20px;
+            width: 160px;
             transition: var(--transition);
         }
 
-        .notify-input:focus {
-            outline: none;
-            border-color: var(--purple);
-            box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.3);
-        }
-
-        .notify-btn {
-            background: linear-gradient(90deg, var(--purple), #6a0dad);
-            color: white;
-            border: none;
-            padding: 16px 35px;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
+        .platform-btn:hover {
+            transform: translateY(-8px);
             box-shadow: var(--glow);
+            background: rgba(30, 25, 50, 0.7);
         }
 
-        .notify-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(138, 43, 226, 0.5);
+        .platform-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--gold);
+        }
+
+        .platform-name {
+            font-weight: 600;
+            color: var(--text-lighter);
+        }
+
+        .platform-subtext {
+            font-size: 0.85rem;
+            margin-top: 5px;
+            opacity: 0.8;
         }
 
         /* Contact Section */
         #contact {
             background: linear-gradient(to top, var(--darker-bg), var(--dark-bg));
+            min-height: 80vh;
         }
 
         .contact-container {
@@ -571,15 +600,15 @@
         }
 
         .social-icon {
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background: linear-gradient(145deg, var(--purple), #6a0dad);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 26px;
+            font-size: 24px;
             transition: var(--transition);
             box-shadow: var(--glow);
             animation: float 5s ease-in-out infinite;
@@ -687,7 +716,7 @@
                 transform: translateY(0);
             }
             50% {
-                transform: translateY(-20px);
+                transform: translateY(-15px);
             }
             100% {
                 transform: translateY(0);
@@ -748,17 +777,17 @@
         /* Responsive Design */
         @media (max-width: 1200px) {
             .tagline {
-                font-size: 2.8rem;
+                font-size: 2.6rem;
             }
             
             .tagline span {
-                font-size: 3.5rem;
+                font-size: 3rem;
             }
         }
 
         @media (max-width: 992px) {
             .navbar {
-                padding: 25px 30px;
+                padding: 20px 30px;
             }
             
             .nav-links {
@@ -798,19 +827,15 @@
             }
             
             .tagline {
-                font-size: 2.4rem;
+                font-size: 2.2rem;
             }
             
             .tagline span {
-                font-size: 3rem;
+                font-size: 2.6rem;
             }
             
             .coming-soon {
-                font-size: 2.8rem;
-            }
-            
-            .play-store {
-                font-size: 4.5rem;
+                font-size: 2.4rem;
             }
             
             .about-content,
@@ -820,21 +845,22 @@
             }
             
             .section-title {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
             
-            .notify-form {
+            .app-platforms {
                 flex-direction: column;
+                align-items: center;
             }
         }
 
         @media (max-width: 768px) {
             .tagline {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .tagline span {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
             .about-text {
@@ -852,8 +878,8 @@
             }
             
             .countdown-item {
-                width: 75px;
-                height: 75px;
+                width: 70px;
+                height: 70px;
             }
             
             .countdown-value {
@@ -861,17 +887,22 @@
             }
             
             .navbar {
-                padding: 20px;
+                padding: 15px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
         }
 
         @media (max-width: 480px) {
             .tagline {
-                font-size: 1.7rem;
+                font-size: 1.6rem;
             }
             
             .tagline span {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .about-content,
@@ -881,7 +912,7 @@
             }
             
             .section-title {
-                font-size: 1.9rem;
+                font-size: 1.7rem;
             }
             
             .feature-card {
@@ -894,20 +925,16 @@
             }
             
             .countdown-item {
-                width: 65px;
-                height: 65px;
+                width: 60px;
+                height: 60px;
             }
             
             .countdown-value {
-                font-size: 1.3rem;
-            }
-            
-            .play-store {
-                font-size: 3.8rem;
+                font-size: 1.2rem;
             }
             
             .footer-content {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -933,9 +960,19 @@
     <section id="home">
         <div class="hero-content">
             <h1 class="tagline">
-                Har lafz mein ek mehsoos
+                जहाँ कहानियाँ और जज़्बात मिलें
                 <span>RuhMantra</span>
             </h1>
+            <p class="hero-text">Immerse yourself in soul-touching stories, heartfelt Shayari, and captivating anime. A sanctuary for emotions and imagination in Hindi and Urdu.</p>
+            
+            <div class="cta-buttons">
+                <a href="#download" class="cta-btn primary-btn">
+                    <i class="fas fa-download"></i> Download Now
+                </a>
+                <a href="#about" class="cta-btn secondary-btn">
+                    <i class="fas fa-book-open"></i> Explore Features
+                </a>
+            </div>
         </div>
         <div class="scroll-hint">
             <i class="fas fa-chevron-down"></i>
@@ -950,6 +987,10 @@
                 <p class="about-text">
                     RuhMantra is an emotional journey through soul-touching stories, timeless Shayari, and magical anime tales in Hindi and Urdu. It connects hearts and heals emotions with words.
                 </p>
+                <p class="about-text">
+                    Designed for dreamers and thinkers, RuhMantra offers a peaceful, aesthetic reading experience — <span>offline, minimal, and meaningful.</span>
+                </p>
+                
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">
@@ -1012,13 +1053,18 @@
                 </div>
             </div>
             
-            <div class="play-store">
-                <i class="fab fa-google-play"></i>
-            </div>
-            
-            <div class="notify-form">
-                <input type="email" class="notify-input" placeholder="Enter your email for early access">
-                <button class="notify-btn">Notify Me</button>
+            <div class="app-platforms">
+                <div class="platform-btn">
+                    <i class="fab fa-apple platform-icon"></i>
+                    <span class="platform-name">iOS</span>
+                    <span class="platform-subtext">Coming to App Store</span>
+                </div>
+                
+                <div class="platform-btn">
+                    <i class="fab fa-android platform-icon"></i>
+                    <span class="platform-name">Android</span>
+                    <span class="platform-subtext">Available on Play Store</span>
+                </div>
             </div>
         </div>
     </section>
@@ -1069,7 +1115,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            © RuhMantra 2025 | Words That Touch the Soul
+            © 2025 RuhMantra | Words That Touch the Soul
         </div>
     </footer>
 
@@ -1113,7 +1159,7 @@
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     window.scrollTo({
-                        top: target.offsetTop,
+                        top: target.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
@@ -1159,22 +1205,7 @@
         updateCountdown();
         
         // Form validation and submission
-        const notifyForm = document.querySelector('.notify-form');
         const contactForm = document.querySelector('.contact-form');
-        
-        if (notifyForm) {
-            notifyForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const emailInput = notifyForm.querySelector('.notify-input');
-                if (emailInput.value && emailInput.value.includes('@')) {
-                    // In a real app, you would send this to your backend
-                    alert('Thank you! We will notify you when RuhMantra is available.');
-                    emailInput.value = '';
-                } else {
-                    alert('Please enter a valid email address.');
-                }
-            });
-        }
         
         if (contactForm) {
             contactForm.addEventListener('submit', (e) => {
@@ -1194,13 +1225,6 @@
                 }
             });
         }
-        
-        // Disable zoom
-        document.addEventListener('touchmove', function(event) {
-            if (event.scale !== 1) { 
-                event.preventDefault(); 
-            }
-        }, { passive: false });
         
         // Animation on scroll
         const observerOptions = {
