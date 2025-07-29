@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RuhMantra | Words That Touch the Soul</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -624,7 +625,6 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: linear-gradient(145deg, var(--purple), #6a0dad);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -635,6 +635,7 @@
             animation: float 5s ease-in-out infinite;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
 
         .social-icon::before {
@@ -654,24 +655,25 @@
             transform: scale(1.5);
         }
 
-        .social-icon:nth-child(2) {
-            animation-delay: 0.5s;
-            background: linear-gradient(145deg, #E1306C, #C13584);
-        }
-
-        .social-icon:nth-child(3) {
-            animation-delay: 1s;
-            background: linear-gradient(145deg, #FF0000, #FF3333);
-        }
-
-        .social-icon:nth-child(4) {
-            animation-delay: 1.5s;
-            background: linear-gradient(145deg, #1DA1F2, #1A91DA);
-        }
-
         .social-icon:hover {
             transform: translateY(-10px) scale(1.1);
             box-shadow: 0 0 30px rgba(138, 43, 226, 0.9);
+            opacity: 0.9;
+        }
+
+        /* Email icon - Purple */
+        .social-icon.email {
+            background: linear-gradient(145deg, var(--purple), #6a0dad);
+        }
+
+        /* Instagram icon - Pink */
+        .social-icon.instagram {
+            background: linear-gradient(145deg, #E1306C, #C13584);
+        }
+
+        /* YouTube icon - Red */
+        .social-icon.youtube {
+            background: linear-gradient(145deg, #FF0000, #FF3333);
         }
         
         /* Notification */
@@ -1178,17 +1180,14 @@
                         We'd love to hear from you! Share your thoughts, feedback, or questions about RuhMantra.
                     </p>
                     <div class="social-icons">
-                        <a href="#" class="social-icon">
-                            <i class="far fa-envelope"></i>
+                        <a href="mailto:ruhmantraofficial@gmail.com" class="social-icon email" target="_blank" title="Email">
+                            <i class="bi bi-envelope"></i>
                         </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/ruhmantra_?igsh=MW0xOTduMDJwZjR4Nw==" class="social-icon instagram" target="_blank" title="Instagram">
+                            <i class="bi bi-instagram"></i>
                         </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
+                        <a href="https://youtube.com/@ruhmantra?si=g8wCwhu_cmkcwtRH" class="social-icon youtube" target="_blank" title="YouTube">
+                            <i class="bi bi-youtube"></i>
                         </a>
                     </div>
                 </div>
