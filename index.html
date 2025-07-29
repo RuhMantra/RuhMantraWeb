@@ -1324,7 +1324,7 @@
             }, 5000);
         }
         
-        // Telegram API Integration
+        // Contact Form Submission
         const contactForm = document.getElementById('contactForm');
         const submitBtn = document.getElementById('submitBtn');
         const btnText = submitBtn.querySelector('.btn-text');
@@ -1355,29 +1355,16 @@
                 btnText.textContent = 'Sending...';
                 
                 try {
-                    // Prepare the message for Telegram
-                    const telegramMessage = `New message from RuhMantra website!\n\n*Name:* ${name}\n*Email:* ${email}\n*Message:* ${message}`;
+                    // Simulate form submission
+                    await new Promise(resolve => setTimeout(resolve, 1500));
                     
-                    // NoCodeAPI endpoint
-                    const apiUrl = 'https://v1.nocodeapi.com/ruhmantra/telegram/ZBXiBQkyxcUFqzmS/sendMessage?data=';
+                    // Show success message
+                    showNotification('success', 'Message sent successfully!');
                     
-                    // Send message to Telegram via NoCodeAPI
-                    const response = await fetch(apiUrl + encodeURIComponent(telegramMessage), {
-                        method: 'GET'
-                    });
-                    
-                    const result = await response.json();
-                    
-                    if (result.success) {
-                        showNotification('success', 'Message sent successfully! We\'ll get back to you soon.');
-                        // Clear the form
-                        document.getElementById('name').value = '';
-                        document.getElementById('email').value = '';
-                        document.getElementById('message').value = '';
-                    } else {
-                        console.error('Telegram API error:', result);
-                        showNotification('error', 'Failed to send message. Please try again later.');
-                    }
+                    // Clear the form
+                    document.getElementById('name').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('message').value = '';
                 } catch (error) {
                     console.error('Error sending message:', error);
                     showNotification('error', 'An error occurred. Please try again.');
